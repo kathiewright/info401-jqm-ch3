@@ -1,1 +1,0 @@
-# jqm-headers-and-footers
