@@ -16,22 +16,6 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.get("/longpage.html", function (request, response) {
-  response.sendFile(__dirname + '/public/longpage.html');
-});
-
-app.get("/fullscreen.html", function (request, response) {
-  response.sendFile(__dirname + '/public/fullscreen.html');
-});
-
-app.get("/persistent_footer_index.html", function (request, response) {
-  response.sendFile(__dirname + '/public/persistent_footer_index.html');
-});
-
-app.get("/header_and_footer_with_navbar.html", function (request, response) {
-  response.sendFile(__dirname + '/public/header_and_footer_with_navbar.html');
-});
-
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);

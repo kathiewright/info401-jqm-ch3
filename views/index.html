@@ -1,16 +1,18 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
+<!-- File:  jqm2-ch3
+    Author:  Kathie Wright
+    Purpose: To illustrate concepts in Chapter 3 of jQM (INFO 401)
+    Date:    Feb 1, 2018
 
-<!-- You might want to try something fancier: -->
-<!-- html/nunjucks docs: http://mozilla.github.io/nunjucks/ -->
-<!-- jade: http://jade-lang.com/ -->
-<!-- haml: http://haml.info/tutorial.html -->
-<!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
-
+    Notes:  This application illustrates 4 examples of headers and footers (pg 32)
+            1.  longpage.html demonstrates fixed headers with automatic scrolling for long content (pg 34)
+            2.  fullscreen.html contains headers that "slide out" to reveal a full screen
+            3.  header_and_footer_with_navbar.html demonstrates adding an unordered list to a footer to create a navigation bar (pg 36)
+            4.  a footer navbar that persists across multiple pages (pg 38)
+-->
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="description" content="A cool thing made with Gomix">
+   
     <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,10 +36,10 @@
     	
     	<div role="main" class="ui-content">
     		<ul data-role="listview">
-    		<li><a href="longpage.html">Longpage Example</a></li>
+    		<li><a href="#longpage">Longpage Example</a></li>
     		<li><a href="fullscreen.html">Fullscreen Example</a></li>
-    		<li><a href="persistent_footer_index.html">Persistent Footer w/Index</a></li>
-    		<li><a href="header_and_footer_with_navbar.html">Header & Footer Navigation Bars</a></li>
+    		<li><a href="header_and_footer_with_navbar.html">Navigation Bars</a></li>
+        <li><a href="persistent_footer_index.html">Persistent Footer</a></li>
     		</ul>
     	</div>
     
@@ -46,6 +48,134 @@
     	</div>
     		
     </div>
+    <div data-role="page" id = "longpage" >    <!-- I couldn't get the data-add-back-btn="true" to work KW 2/1/18-->
+
+  <div data-role="header" data-position="fixed">
+    <h1>Long Content Page</h1>
+    <a href="https://s2018-jqm2-ch3.glitch.me/" class="ui-btn-right" data-icon="home">Home</a>
+  </div>
+	
+  <div role="main" class="ui-content">
     
+<h3>
+  This example illustrates a mobile web page with content that does not fit into a single screen.  Note that jQM automatically adds scroll bars to allow
+  the user to scroll through the content.  An attribute:  data-position="fixed" maintains the header at the top of the page as the user scrolls.
+</h3>
+    
+	<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id posuere lacus. 
+Nulla ac sem ut eros dignissim interdum a et erat. Class aptent taciti sociosqu ad litora
+torquent per conubia nostra, per inceptos himenaeos. In ac tellus est. Nunc consequat 
+metus lobortis enim mattis nec convallis tellus pulvinar. Nullam diam ligula, dictum 
+sed congue nec, dapibus id ipsum. Ut facilisis pretium dui, nec varius dui iaculis 
+ultricies. Maecenas sollicitudin urna felis, non faucibus leo. Cum sociis natoque 
+penatibus et magnis dis parturient montes, nascetur ridiculus mus. In id volutpat lectus.
+Quisque mauris ipsum, vehicula id ornare aliquet, auctor volutpat dui. Sed euismod sem 
+in arcu dapibus condimentum dictum nibh consequat.
+	</p>
+
+	<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id posuere lacus. 
+Nulla ac sem ut eros dignissim interdum a et erat. Class aptent taciti sociosqu ad litora
+torquent per conubia nostra, per inceptos himenaeos. In ac tellus est. Nunc consequat 
+metus lobortis enim mattis nec convallis tellus pulvinar. Nullam diam ligula, dictum 
+sed congue nec, dapibus id ipsum. Ut facilisis pretium dui, nec varius dui iaculis 
+ultricies. Maecenas sollicitudin urna felis, non faucibus leo. Cum sociis natoque 
+penatibus et magnis dis parturient montes, nascetur ridiculus mus. In id volutpat lectus.
+Quisque mauris ipsum, vehicula id ornare aliquet, auctor volutpat dui. Sed euismod sem 
+in arcu dapibus condimentum dictum nibh consequat.
+	</p>
+
+	<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id posuere lacus. 
+Nulla ac sem ut eros dignissim interdum a et erat. Class aptent taciti sociosqu ad litora
+torquent per conubia nostra, per inceptos himenaeos. In ac tellus est. Nunc consequat 
+metus lobortis enim mattis nec convallis tellus pulvinar. Nullam diam ligula, dictum 
+sed congue nec, dapibus id ipsum. Ut facilisis pretium dui, nec varius dui iaculis 
+ultricies. Maecenas sollicitudin urna felis, non faucibus leo. Cum sociis natoque 
+penatibus et magnis dis parturient montes, nascetur ridiculus mus. In id volutpat lectus.
+Quisque mauris ipsum, vehicula id ornare aliquet, auctor volutpat dui. Sed euismod sem 
+in arcu dapibus condimentum dictum nibh consequat.
+	</p>
+
+	<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id posuere lacus. 
+Nulla ac sem ut eros dignissim interdum a et erat. Class aptent taciti sociosqu ad litora
+torquent per conubia nostra, per inceptos himenaeos. In ac tellus est. Nunc consequat 
+metus lobortis enim mattis nec convallis tellus pulvinar. Nullam diam ligula, dictum 
+sed congue nec, dapibus id ipsum. Ut facilisis pretium dui, nec varius dui iaculis 
+ultricies. Maecenas sollicitudin urna felis, non faucibus leo. Cum sociis natoque 
+penatibus et magnis dis parturient montes, nascetur ridiculus mus. In id volutpat lectus.
+Quisque mauris ipsum, vehicula id ornare aliquet, auctor volutpat dui. Sed euismod sem 
+in arcu dapibus condimentum dictum nibh consequat.
+	</p>
+
+	<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id posuere lacus. 
+Nulla ac sem ut eros dignissim interdum a et erat. Class aptent taciti sociosqu ad litora
+torquent per conubia nostra, per inceptos himenaeos. In ac tellus est. Nunc consequat 
+metus lobortis enim mattis nec convallis tellus pulvinar. Nullam diam ligula, dictum 
+sed congue nec, dapibus id ipsum. Ut facilisis pretium dui, nec varius dui iaculis 
+ultricies. Maecenas sollicitudin urna felis, non faucibus leo. Cum sociis natoque 
+penatibus et magnis dis parturient montes, nascetur ridiculus mus. In id volutpat lectus.
+Quisque mauris ipsum, vehicula id ornare aliquet, auctor volutpat dui. Sed euismod sem 
+in arcu dapibus condimentum dictum nibh consequat.
+	</p>
+
+	<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id posuere lacus. 
+Nulla ac sem ut eros dignissim interdum a et erat. Class aptent taciti sociosqu ad litora
+torquent per conubia nostra, per inceptos himenaeos. In ac tellus est. Nunc consequat 
+metus lobortis enim mattis nec convallis tellus pulvinar. Nullam diam ligula, dictum 
+sed congue nec, dapibus id ipsum. Ut facilisis pretium dui, nec varius dui iaculis 
+ultricies. Maecenas sollicitudin urna felis, non faucibus leo. Cum sociis natoque 
+penatibus et magnis dis parturient montes, nascetur ridiculus mus. In id volutpat lectus.
+Quisque mauris ipsum, vehicula id ornare aliquet, auctor volutpat dui. Sed euismod sem 
+in arcu dapibus condimentum dictum nibh consequat.
+	</p>
+
+	<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id posuere lacus. 
+Nulla ac sem ut eros dignissim interdum a et erat. Class aptent taciti sociosqu ad litora
+torquent per conubia nostra, per inceptos himenaeos. In ac tellus est. Nunc consequat 
+metus lobortis enim mattis nec convallis tellus pulvinar. Nullam diam ligula, dictum 
+sed congue nec, dapibus id ipsum. Ut facilisis pretium dui, nec varius dui iaculis 
+ultricies. Maecenas sollicitudin urna felis, non faucibus leo. Cum sociis natoque 
+penatibus et magnis dis parturient montes, nascetur ridiculus mus. In id volutpat lectus.
+Quisque mauris ipsum, vehicula id ornare aliquet, auctor volutpat dui. Sed euismod sem 
+in arcu dapibus condimentum dictum nibh consequat.
+	</p>
+
+	<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id posuere lacus. 
+Nulla ac sem ut eros dignissim interdum a et erat. Class aptent taciti sociosqu ad litora
+torquent per conubia nostra, per inceptos himenaeos. In ac tellus est. Nunc consequat 
+metus lobortis enim mattis nec convallis tellus pulvinar. Nullam diam ligula, dictum 
+sed congue nec, dapibus id ipsum. Ut facilisis pretium dui, nec varius dui iaculis 
+ultricies. Maecenas sollicitudin urna felis, non faucibus leo. Cum sociis natoque 
+penatibus et magnis dis parturient montes, nascetur ridiculus mus. In id volutpat lectus.
+Quisque mauris ipsum, vehicula id ornare aliquet, auctor volutpat dui. Sed euismod sem 
+in arcu dapibus condimentum dictum nibh consequat.
+	</p>
+
+	<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id posuere lacus. 
+Nulla ac sem ut eros dignissim interdum a et erat. Class aptent taciti sociosqu ad litora
+torquent per conubia nostra, per inceptos himenaeos. In ac tellus est. Nunc consequat 
+metus lobortis enim mattis nec convallis tellus pulvinar. Nullam diam ligula, dictum 
+sed congue nec, dapibus id ipsum. Ut facilisis pretium dui, nec varius dui iaculis 
+ultricies. Maecenas sollicitudin urna felis, non faucibus leo. Cum sociis natoque 
+penatibus et magnis dis parturient montes, nascetur ridiculus mus. In id volutpat lectus.
+Quisque mauris ipsum, vehicula id ornare aliquet, auctor volutpat dui. Sed euismod sem 
+in arcu dapibus condimentum dictum nibh consequat.
+	</p>
+
+	</div>
+		
+	<div data-role="footer" data-position="fixed">
+      <h4>Long Page Footer</h4>
+  </div>
+	
+</div>
   </body>
 </html>
